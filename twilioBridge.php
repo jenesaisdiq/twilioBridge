@@ -24,10 +24,10 @@
         $noEmailFlag = 1;
     }*/
 
-    $fp = fopen("data.txt", "a"); 
+    /*$fp = fopen("data.txt", "a"); 
     fwrite($fp, ($_REQUEST['From']. " said " . $message . "\r\n")); 
     //fwrite($fp, "\n";
-    fclose($fp); 
+    fclose($fp); */
     
      
     //$photo = '3';   //hardcoded for testing
@@ -44,7 +44,7 @@
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 
     //if ($noEmailFlag == 0) {
-        $response = http_post_fields("https://api.spark.io/v1/devices/".$coreID./"message", $fields);
+        $response = http_post_fields("https://api.spark.io/v1/devices/".$coreID."/message", $fields);
         echo "<Response>";
         echo "<Sms>Look up!</Sms>";
         echo "</Response>";
